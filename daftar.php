@@ -11,9 +11,7 @@ if($namaNew == "" || $pwNew == ""){
             window.history.back();
         </script>";
     
-    
 }else {
-
     $passwordHash = password_hash($pwNew, PASSWORD_DEFAULT);
     $queryNew = "INSERT INTO users (nama, status, password) VALUES ('$namaNew', '$statusNew', '$passwordHash')";
 
