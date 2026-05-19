@@ -11,7 +11,7 @@ const apiKey = "1a646605acf5fa0ab6df21b876c19729";
             container.innerHTML = '';
 
             listMovie.forEach(film => {
-                const urlPoster = `https://image.tmdb.org/t/p/w500/${film.poster_path}`;
+                const urlPoster = `https://image.tmdb.org/t/p/w500${film.poster_path}`;
                 container.innerHTML += `
                     <div class="col">
                         <div class="card shadow-lg">
