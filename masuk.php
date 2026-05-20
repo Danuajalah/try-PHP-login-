@@ -1,6 +1,7 @@
 <?php
 
 include 'koneksi.php';
+$dashboard = file_get_contents("dashboard.php");
 
 $nama = $_POST['nama'];
 $pw = $_POST['password'];
@@ -19,8 +20,8 @@ if($nama == '' || $pw == ''){
             $dataUser = mysqli_fetch_assoc($terdaftar);
 
             if(password_verify($pw, $dataUser['password'])){
-                echo "<h3>Selamat $nama kamu berhasil login ke aplikasi</h3>";
-                echo "<a href='index.php'>Kembali ke halaman login</a>";
+                echo $dashboard;
+                // echo "<span id='user' data-username='$nama'></span>";
             }else{
                 echo "<script>alert('ups nama dan password mungkin salah');window.history.back();</script>";
             }

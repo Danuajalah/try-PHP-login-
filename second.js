@@ -1,5 +1,5 @@
 const apiKey = "1a646605acf5fa0ab6df21b876c19729";
-    const url = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en`;
+const url = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en`;
 
     function pickMoviesItem(){
 
@@ -8,6 +8,9 @@ const apiKey = "1a646605acf5fa0ab6df21b876c19729";
 
             const listMovie = data.results;
             const container = document.getElementById('movieContainer');
+            // const userKosong = document.getElementById('userName');
+            // const userName = document.getElementById('user');
+            // const userDb = userName.dataset.username;
             container.innerHTML = '';
 
             listMovie.forEach(film => {
@@ -35,6 +38,7 @@ const apiKey = "1a646605acf5fa0ab6df21b876c19729";
             console.log(e)
         })
 
+        // userKosong.innerHTML = userDb;
     }
 
     pickMoviesItem();

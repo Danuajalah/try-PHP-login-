@@ -12,11 +12,14 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
     
     <nav class="navbar navbar navbar-expand-lg navbar-dark bg-secondary shadow">
-        <div class="container justify-content-end">
+        <div class="container justify-content-end position-relative">
+            <a class="navbar-brand position-absolute start-0" href="index.php"><span class="bi bi-arrow-left-square"></span> Go Back</a>
             <a class="navbar-brand" href="#">Movies List</a>
             <span id="userName" class="navbar-text">Welcome</span>
         </div>
