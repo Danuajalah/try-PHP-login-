@@ -13,32 +13,34 @@ const url = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&langua
             // const userDb = userName.dataset.username;
             container.innerHTML = '';
 
-            listMovie.forEach(film => {
+            const mapMoviesCard = listMovie.map(film => {
                 const urlPoster = `https://image.tmdb.org/t/p/w500${film.poster_path}`;
-                container.innerHTML += `
-                    <div class="col">
+                return `<div class="col">
                         <div class="card shadow-lg">
                             <img src="${urlPoster}" class="card-img-top">
                             <div class="card-body">
-                                <h5>${film.title}</h5>
+                                <div class="text-center">
+                                    <h5>${film.title}</h5>
+                                </div>
+                                <hr>
                                 <div class="overflow-scroll">
-                                <p>${film.overview.substring(0, 100)}</p>
+                                    <p class="card-text">${film.overview.substring(0, 100)}...</p>
                                 </div>
                                 <div class="card-footer text-center">
-                                <h6><span class="text-yellow">⭐</span>${Math.round(film.vote_average)}/10 <small> Rating from Me</small></h6>
+                                    <h6><span class="text-yellow">⭐</span>${film.vote_average.toFixed(1)}/10 <small> Rating from Me</small></h6>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                `
-            });
+                        </div>
+                        `
+            }).join("");
 
+            container.innerHTML += mapMoviesCard;
         })
         .catch(e => {
             console.log(e)
         })
 
-        // userKosong.innerHTML = userDb;
     }
 
     pickMoviesItem();
