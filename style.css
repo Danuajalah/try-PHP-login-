@@ -1,0 +1,19 @@
+.footer-container{
+    position: relative;
+    display: flex;
+    border: none;
+    background-color: black;
+    color: #fff;
+}
+
+.footer-container .fav{
+    position: relative;
+    display: block;
+    background-color: #fff;
+    border: 8px solid #fff;
+    border-radius: 10px 10px 0px 0px;
+    border-bottom: none;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 60%, 0% 100%);
+    width: 35px;
+    height: 45px;
+}
